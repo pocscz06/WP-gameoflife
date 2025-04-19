@@ -41,6 +41,7 @@ frontend/:
 - React bootstrapped with Vite for initialization
 - Contains all of our UI/UX implementation
 - Tailwind CSS for ease of modern styling
+- [React Router](https://reactrouter.com/6.29.0/start/overview) for Routing
 
 > [!NOTE]
 > Most frontend implementation will be done within the src/ folder. assets/ for external images, components/ for reusable UI components, and styles/ for our stylesheets.

@@ -88,5 +88,4 @@ php -S localhost:8000
 
 > [!NOTE]
 > Both servers need to be running simultaneously to test the full-stack implementation of the project. If you just run "npm run dev," you will only be testing the frontend.
-> [!NOTE]
 > Developers typically use PHP servers to serve the PHP files rather than the built-in PHP server (like above); we could as well if you guys desire

@@ -47,12 +47,12 @@ frontend/:
 > App.jsx is the root application file. It is used for global configuration (global stylesheet), or for global components (i.e., headers, footers, sidebars, etc.)
 > As we will only have a few (maybe 3-4) separate pages, I am opting to not include a pages/ folder--we will just create our pages within the src/ dir.
 
-backend:
+backend/:
 
 - PHP
 - Contains backend logic for form validation, user authentication, and communication with the database
 
-database:
+database/:
 
 - SQL (MySQL)
 

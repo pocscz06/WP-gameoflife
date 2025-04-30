@@ -16,8 +16,8 @@ The Game of Life involves a grid of cells where each cell has one of two states:
 
 # AUTHORS
 
-KENNY PHAM
-STEVEN PHAN
+KENNY PHAM  
+STEVEN PHAN  
 LAW REH
 
 ## PROJECT STRUCTURE
@@ -26,13 +26,17 @@ LAW REH
 WP-gameoflife/
 ├── frontend/
     └── src/
-        └── assets/
-        └── components/
-        └── styles/
+        └── assets/ -- External images/icons, etc. (if applicable)
+        └── components/ -- Reusable React components
+        └── styles/ -- ALL stylesheets; both modular and for page displays
 ├── backend/
-    └── TBA
-├── database/
-    └── TBA
+    └── admin
+        └── api -- API endpoints for managing users' sessions, stats, and accounts
+    └── api -- API endpoints for session management
+        └── user
+    └── auth -- Registration/Login backend logic
+    └── config -- Database connection configuration
+    └── includes -- Helper/utility functions
 ```
 
 frontend/:
@@ -73,13 +77,38 @@ As our build directories are ignored by convention via .gitignore, whenever you 
 npm install
 ```
 
-2. Start development server (for testing/demo)
+2. Connect to the database server (via PuTTY or whichever console/terminal you prefer)
+
+   Connect to the CODD server within your PuTTY Configuration:
+   <img src="frontend/src/assets/PuTTY_Config.jpg"/>
+
+   Login to your CODD account as you would in whatever software you use for FTP:
+   <img src="frontend/src/assets/CODD_Login.jpg"/>
+
+   Run these commands in sequence:
 
 ```
+mysql -u kpham21 -p
+
+kpham21
+
+USE kpham21;
+```
+
+> [!NOTE]
+> Our database is currently configured to run on my provided MariaDB server using the MySQLi extension for PHP support. Our professor, Louis Henry, provided each of us an account to access our own MariaDB servers. With that said, our localhost development servers CANNOT access the database unless we transfer our project files into our pertinent CODD directories. As such, I have my project within my CODD directory. If you want to make changes that involve database interactions, then those need to be updated within my CODD directory as well. Reach out to me if that is the case. There are other, easier and hassle-free alternatives, but this is what the professor provided for us.
+
+3. Start Node development server (for testing/demo)
+
+```
+cd frontend
+
 npm run dev
 ```
 
-3. Start PHP development server
+4. Start PHP development server
+   > [!NOTE]
+   > The PHP server should run on a different port from your frontend. If the frontend is also running on port :8000, then change your php local port.
 
 ```
 cd backend

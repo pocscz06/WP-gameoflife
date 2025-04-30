@@ -107,8 +107,9 @@ npm run dev
 ```
 
 4. Start PHP development server
-   > [!NOTE]
-   > The PHP server should run on a different port from your frontend. If the frontend is also running on port :8000, then change your php local port.
+
+> [!NOTE]
+> The PHP server should run on a different port from your frontend. If the frontend is also running on port :8000, then change your php local port.
 
 ```
 cd backend

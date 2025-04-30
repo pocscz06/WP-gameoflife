@@ -59,7 +59,7 @@ backend/:
 
 database/:
 
-- SQL (MySQL)
+- SQL (MariaDB; MySQLi)
 
 # Instructions to Build and Run
 
@@ -68,6 +68,7 @@ Prerequisites:
 - [Node.js](https://docs.npmjs.com/cli/v11/configuring-npm/install)
 - NPM (Node Package Manager; comes with Node.js)
 - [MySQL](https://dev.mysql.com/downloads/installer/)
+- [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) (Or any other SSH/Telnet alternatives)
 
 As our build directories are ignored by convention via .gitignore, whenever you pull changes from the repository that include additions to project dependencies, you should run:
 

@@ -18,10 +18,7 @@ const AdminDashboard = () => {
     const checkAdminStatus = async () => {
       try {
         const response = await fetch(
-          "https://codd.cs.gsu.edu/~kpham21/WP-gameoflife/backend/api/user/check-session.php",
-          {
-            credentials: "include",
-          }
+          "/api/WP-gameoflife/backend/api/user/check-session.php"
         );
         const data = await response.json();
 
@@ -44,10 +41,7 @@ const AdminDashboard = () => {
 
     try {
       const usersResponse = await fetch(
-        "https://codd.cs.gsu.edu/~kpham21/WP-gameoflife/backend/admin/api/users.php",
-        {
-          credentials: "include",
-        }
+        "/api/WP-gameoflife/backend/admin/api/users.php"
       );
       const usersData = await usersResponse.json();
 
@@ -56,10 +50,7 @@ const AdminDashboard = () => {
       }
 
       const sessionsResponse = await fetch(
-        "https://codd.cs.gsu.edu/~kpham21/WP-gameoflife/backend/admin/api/sessions.php",
-        {
-          credentials: "include",
-        }
+        "/api/WP-gameoflife/backend/admin/api/sessions.php"
       );
       const sessionsData = await sessionsResponse.json();
 
@@ -68,10 +59,7 @@ const AdminDashboard = () => {
       }
 
       const statsResponse = await fetch(
-        "https://codd.cs.gsu.edu/~kpham21/WP-gameoflife/backend/admin/api/stats.php",
-        {
-          credentials: "include",
-        }
+        "/api/WP-gameoflife/backend/admin/api/stats.php"
       );
       const statsData = await statsResponse.json();
 
@@ -97,10 +85,9 @@ const AdminDashboard = () => {
 
     try {
       const response = await fetch(
-        `https://codd.cs.gsu.edu/~kpham21/WP-gameoflife/backend/admin/api/users.php?id=${userId}`,
+        `/api/WP-gameoflife/backend/admin/api/users.php?id=${userId}`,
         {
           method: "DELETE",
-          credentials: "include",
         }
       );
 
@@ -121,10 +108,9 @@ const AdminDashboard = () => {
   const handlePromoteUser = async (userId) => {
     try {
       const response = await fetch(
-        `https://codd.cs.gsu.edu/~kpham21/WP-gameoflife/backend/admin/api/users.php?id=${userId}`,
+        `/api/WP-gameoflife/backend/admin/api/users.php?id=${userId}`,
         {
           method: "PUT",
-          credentials: "include",
           headers: {
             "Content-Type": "application/json",
           },

@@ -15,10 +15,7 @@ const NavBar = () => {
     const checkLoginStatus = async () => {
       try {
         const response = await fetch(
-          "https://codd.cs.gsu.edu/~kpham21/WP-gameoflife/backend/api/user/check-session.php",
-          {
-            credentials: "include",
-          }
+          "/api/WP-gameoflife/backend/api/user/check-session.php"
         );
         const data = await response.json();
 
@@ -51,10 +48,9 @@ const NavBar = () => {
   const handleLogout = async () => {
     try {
       const response = await fetch(
-        "https://codd.cs.gsu.edu/~kpham21/WP-gameoflife/backend/auth/logout.php",
+        "/api/WP-gameoflife/backend/auth/logout.php",
         {
           method: "POST",
-          credentials: "include",
         }
       );
 

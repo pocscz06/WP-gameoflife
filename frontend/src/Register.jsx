@@ -20,10 +20,7 @@ const Register = () => {
     const checkLoginStatus = async () => {
       try {
         const response = await fetch(
-          "https://codd.cs.gsu.edu/~kpham21/WP-gameoflife/backend/api/user/check-session.php",
-          {
-            credentials: "include",
-          }
+          "/api/WP-gameoflife/backend/api/user/check-session.php"
         );
         const data = await response.json();
 
@@ -87,10 +84,9 @@ const Register = () => {
 
     try {
       const response = await fetch(
-        "https://codd.cs.gsu.edu/~kpham21/WP-gameoflife/backend/auth/register.php",
+        "/api/WP-gameoflife/backend/auth/register.php",
         {
           method: "POST",
-          credentials: "include",
           headers: {
             "Content-Type": "application/json",
           },

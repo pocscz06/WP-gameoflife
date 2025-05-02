@@ -110,7 +110,9 @@ npm run dev
 4. Start PHP development server
 
 > [!NOTE]
-> The PHP server should run on a different port from your frontend. If the frontend is also running on port :8000, then change your php local port.
+> The PHP server should run on a different port from your frontend. If the frontend is also running on port :8000, then change your php local port. Also, if you're not sure how you can execute new commands in a terminal when you already have it running the frontend development server, on an IDE like VSC, you can _split_ the terminal:
+
+<img src="frontend/src/assets/split_terminal.png"/>
 
 ```
 cd backend
